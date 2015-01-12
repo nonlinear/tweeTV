@@ -1,0 +1,157 @@
+body {
+ margin: 0;
+ padding: 0;
+ font-weight: bold;
+}
+
+@mixin bg {
+ background-color: rgba(white, .7);
+ padding: 3px;
+}
+.bg {
+
+ @include fadeInRightBig;
+ background-image: url(../images/bg.jpg);
+ @include cover;
+ position: absolute;
+ width: 100%;
+ heighT: 100%;
+ top: 0;
+ left: 0;
+@include filter(blur, 2px);
+}
+
+.post {
+ @include fadeInRightBig;
+ position: absolute;
+ width: 100%;
+ heighT: 100%;
+ top: 0;
+ left: 0;
+ displaY: table;
+     @include reset(all);
+     
+
+ .user, .tweet {
+  displaY: table-cell;
+  vertical-align: top;
+ }
+}
+.user {
+ padding: $g2;
+ margin: 0;
+ font-size: 15px;
+ text-align: left;
+ p {
+      @include bg;
+      margin: 0;
+      displaY: inline-block;
+      &.author {
+       font-size: 15px;
+      }
+      &.time {
+       font-size: 10px;
+       font-weight: normal;
+      }
+ }
+}
+.avatar {
+ background-image: url(../images/avatar.jpg);
+ @include square(100px);
+ margin-bottom: 5px;
+ @include radius(50%);
+ background-size: contain;
+}
+
+$step: 200ms;
+
+.tweet {
+ padding: $g2;
+ padding-lefT: 0;
+ margin: 0;
+ font-size: 25px;
+ span {
+  displaY: inline-block;
+  @include fadeIn;
+@include bg;
+  &:nth-of-type(1) {
+   @include fadeIn($delay: $step * 1);
+  }
+  &:nth-of-type(2) {
+   @include fadeIn($delay: $step * 2);
+  }
+  &:nth-of-type(3) {
+   @include fadeIn($delay: $step * 3);
+  }
+  &:nth-of-type(4) {
+   @include fadeIn($delay: $step * 4);
+  }
+  &:nth-of-type(5) {
+   @include fadeIn($delay: $step * 5);
+  }
+  &:nth-of-type(6) {
+   @include fadeIn($delay: $step * 6);
+  }
+  &:nth-of-type(7) {
+   @include fadeIn($delay: $step * 7);
+  }
+  &:nth-of-type(8) {
+   @include fadeIn($delay: $step * 8);
+  }
+  &:nth-of-type(9) {
+   @include fadeIn($delay: $step * 9);
+  }
+  &:nth-of-type(10) {
+   @include fadeIn($delay: $step * 10);
+  }
+  &:nth-of-type(11) {
+   @include fadeIn($delay: $step * 11);
+  }
+  &:nth-of-type(12) {
+   @include fadeIn($delay: $step * 12);
+  }
+  &:nth-of-type(13) {
+   @include fadeIn($delay: $step * 13);
+  }
+  &:nth-of-type(14) {
+   @include fadeIn($delay: $step * 14);
+  }
+  &:nth-of-type(15) {
+   @include fadeIn($delay: $step * 15);
+  }
+  &:nth-of-type(16) {
+   @include fadeIn($delay: $step * 16);
+  }
+  &:nth-of-type(17) {
+   @include fadeIn($delay: $step * 17);
+  }
+  &:nth-of-type(18) {
+   @include fadeIn($delay: $step * 18);
+  }
+  &:nth-of-type(19) {
+   @include fadeIn($delay: $step * 19);
+  }
+  &:nth-of-type(20) {
+   @include fadeIn($delay: $step * 20);
+  }
+ }
+}
+#full {
+ font-size: 15px;
+ @include bg;
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   padding: 10px;
+   @include opacity(50);
+   @include trans;
+   &:hover {
+    @include opacity(100);
+    font-size: 20px;
+   }
+   i {
+        @include reset(all);
+        color: black
+        
+   }
+}
