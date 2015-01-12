@@ -5,24 +5,24 @@ body {
 }
 
 @mixin bg {
- background-color: rgba(white, .7);
+ background-color: white;
  padding: 3px;
 }
 .bg {
 
- @include fadeInRightBig;
- background-image: url(../images/bg.jpg);
+ @include fadeInLeft($delay: 200ms);
+ // background-image: url(../images/bg.jpg);
+ background-color: blue;
  @include cover;
  position: absolute;
  width: 100%;
  heighT: 100%;
  top: 0;
  left: 0;
-@include filter(blur, 2px);
 }
 
 .post {
- @include fadeInRightBig;
+ @include fadeInLeft;
  position: absolute;
  width: 100%;
  heighT: 100%;
@@ -52,6 +52,7 @@ body {
       &.time {
        font-size: 10px;
        font-weight: normal;
+       @include translate(0, -3);
       }
  }
 }
@@ -136,8 +137,11 @@ $step: 200ms;
   }
  }
 }
-#full {
+#request {
  font-size: 15px;
+   border: none;
+   margin: 0;
+   cursor: pointer;
  @include bg;
    position: fixed;
    bottom: 0;
